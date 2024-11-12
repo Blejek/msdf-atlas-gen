@@ -511,7 +511,7 @@ int GridAtlasPacker::pack(GlyphGeometry *glyphs, int count) {
             glyph->placeBox(col*cellWidth, height-(row+1)*cellHeight);
             if (++col >= columns) {
                 if (++row >= rows) {
-                    return end-glyph-1;
+                    return (int)(end - glyph - 1);
                 }
                 col = 0;
             }
